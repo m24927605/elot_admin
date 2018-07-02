@@ -250,7 +250,7 @@ this.getMarketData =function(market_param, interval_param,start,end, container) 
 
 
     this.returnResult=function(market_param,interval_param,start,end, container) {
-        console.log( market_param+"_"+interval_param );   
+        //console.log( market_param+"_"+interval_param );   
         sails.sockets.broadcast(market_param+"_"+interval_param,market_param+"_"+interval_param,container);
         
     }
