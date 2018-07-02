@@ -9,6 +9,9 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.globals.html
  */
 module.exports.globals = {
+  market:['ELOTETH'],
+  interval:[ 604800,86400,14400,7200,3600,1800,900,300,60 ],
+  
 
   /****************************************************************************
   *                                                                           *
