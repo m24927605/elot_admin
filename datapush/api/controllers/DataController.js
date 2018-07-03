@@ -6,7 +6,7 @@
  */
 var scheduler = require('node-schedule');
 const request = require('request');
-const url_str ="http://118.27.16.179";  
+const url_str ="http://133.130.121.21:8080/";
 const NodeCache = require( "node-cache" );
 const cache = new NodeCache();
 
@@ -25,7 +25,7 @@ function getFinishedOrder(req, res,container) {
         }
     };
 
-    console.log("order.finished",options);
+    console.log("order.finished",JSON.stringify(options.json));
 
     request.post(options, function(error, response, body) {
         if (!body) {

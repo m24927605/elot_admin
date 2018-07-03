@@ -1,6 +1,6 @@
 var scheduler             = require('node-schedule');
 const request             = require('request');
-const url_str             = "http://118.27.16.179";
+const url_str             = "http://133.130.121.21:8080";
 var   period              = 86640;
 var market_config         = sails.config.globals.market;
 var interval_config       = sails.config.globals.interval;
@@ -250,7 +250,7 @@ this.getMarketData =function(market_param, interval_param,start,end, container) 
 
 
     this.returnResult=function(market_param,interval_param,start,end, container) {
-        //console.log( market_param+"_"+interval_param );   
+        console.log( market_param+"_"+interval_param );   
         sails.sockets.broadcast(market_param+"_"+interval_param,market_param+"_"+interval_param,container);
         
     }
