@@ -25,6 +25,8 @@ function getFinishedOrder(req, res,container) {
         }
     };
 
+
+
     request.post(options, function(error, response, body) {
         if (!body) {
             return;
@@ -36,6 +38,7 @@ function getFinishedOrder(req, res,container) {
             return
         } else {
             container.finishedOrder = body.result;
+            console.log("container.finishedOrder",container.finishedOrder);
             getBalance(req, res,container);
         }
     });
