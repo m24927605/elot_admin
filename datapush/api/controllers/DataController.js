@@ -25,7 +25,7 @@ function getFinishedOrder(req, res,container) {
         }
     };
 
-
+    console.log("order.finished",options);
 
     request.post(options, function(error, response, body) {
         if (!body) {
