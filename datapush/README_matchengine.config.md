@@ -1,0 +1,67 @@
+{
+    "debug": true,
+    "process": {
+        "file_limit": 1000000,
+        "core_limit": 1000000000
+    },
+    "log": {
+        "path": "/var/log/trade/matchengine",
+        "flag": "fatal,error,warn,info,debug,trace",
+        "num": 10
+    },
+    "alert": {
+        "host": "matchengine",
+        "addr": "127.0.0.1:4444"
+    },
+    "svr": {
+        "bind": [
+            "tcp@0.0.0.0:7316",
+            "udp@0.0.0.0:7316"
+        ],
+        "buf_limit": 100,
+        "max_pkg_size": 10240,
+        "heartbeat_check": false
+    },
+    "cli": "tcp@127.0.0.1:7317",
+    "db_log": {
+        "host": "localhost",
+        "user": "root",
+        "pass": "Zaq12wsx",
+        "name": "trade_log"
+    },
+    "db_history": {
+        "host": "localhost",
+        "user": "root",
+        "pass": "Zaq12wsx",
+        "name": "trade_history"
+    },
+    "assets": [
+        {
+            "name": "ELOT",
+            "prec_save": 12,
+            "prec_show": 8
+        }, {
+            "name": "ETH",
+            "prec_save": 20,
+            "prec_show": 8
+        }
+    ],
+    "markets": [
+        {
+            "name": "ELOTETH",
+            "stock": {
+                "name": "ELOT",
+                "prec": 8
+            },
+            "money": {
+                "name": "ETH",
+                "prec": 8
+            },
+            "min_amount": "0.001"
+        }
+           
+    ],
+    "brokers": "127.0.0.1:9092",
+    "slice_interval": 3600,
+    "slice_keeptime": 259200 
+}

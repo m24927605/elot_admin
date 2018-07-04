@@ -1,6 +1,6 @@
 var scheduler = require('node-schedule');
 const request = require('request');
-const url_str = "http://133.130.121.21:8080";
+const url_str = sails.config.globals.server_viabtc;
 const NodeCache = require("node-cache");
 const cache = new NodeCache();
 
